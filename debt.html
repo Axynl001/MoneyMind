@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="savings.html">Savings Goals</a></li>
+            <li><a href="budget.html">Budget Tracker</a></li>
+            <li><a href="debt.html">Debt Planner</a></li>
+            <li><a href="ask.html">Ask MoneyMind</a></li>
+            <li><a href="account.html">Account</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sidebar structure -->
+<div id="sidebar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="budget.html">Budget Tracker</a></li>
+        <li><a href="savings.html">Savings Goals</a></li>
+        <li><a href="debt.html">Debt Planner</a></li>
+        <li><a href="ask.html">Ask MoneyMind</a></li>
+        <li><a href="account.html">Account</a></li>
+    </ul>
+</div>
+    
+<div class="container">
+    <h2>Debt Planner</h2>
+    <input type="number" id="debt-amount" placeholder="Enter total debt">
+    <input type="number" id="monthly-payment" placeholder="Monthly payment">
+    <button onclick="calculateDebt()">Calculate Payoff</button>
+    <p>Months to payoff: <span id="debt-months">0</span></p>
+
+    <div id="payoff-section" style="display:none;">
+        <h3>Track Your Payments</h3>
+        <ul id="payoff-list"></ul>
+        <p id="success-message" style="color: green; font-weight: bold; display: none;">🎉 Debt Cleared! 🎉</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask MoneyMind - Finance Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<header>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-list">
+            
+        </ul>
+    </nav>
+</header>
+
+<!-- Sidebar structure -->
+<div id="sidebar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="savings.html">Savings Goals</a></li>
+        <li><a href="budget.html">Budget Tracker</a></li>
+        <li><a href="debt.html">Debt Planner</a></li>
+        <li><a href="ask.html">Ask MoneyMind</a></li>
+        <li><a href="account.html">Account</a></li>
+    </ul>
+</div>
+    
+    
+    <div class="chat-container">
+        <h2>MoneyMind Chatbot</h2>
+        <div id="chat-box">
+            <p class="bot-message">👋 Hello! I’m MoneyMind chatbot, your finance assistant. Ask me anything about budgeting, saving, or investing!</p>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your question...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</body>
+</html>

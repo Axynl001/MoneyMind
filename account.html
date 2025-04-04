@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<header>
+  <nav>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <ul id="nav-list">
+          
+      </ul>
+  </nav>
+</header>
+
+<!-- Sidebar structure -->
+<div id="sidebar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="savings.html">Savings Goals</a></li>
+    <li><a href="budget.html">Budget Tracker</a></li>
+    <li><a href="debt.html">Debt Planner</a></li>
+    <li><a href="ask.html">Ask MoneyMind</a></li>
+    <li><a href="account.html">Account</a></li>
+  </ul>
+</div>
+    
+
+  <div class="premium-container">
+    <h2>Premium Hub</h2>
+    <div class="premium-features">
+      <div class="premium-card" data-feature="Unlimited AI Coaching">
+        <h3>Unlimited AI Coaching</h3>
+        <p>Get personalized finance coaching 24/7.</p>
+      </div>
+      <div class="premium-card" data-feature="Debt Hacks">
+        <h3>Debt Hacks</h3>
+        <p>Expert tips to manage and reduce your debt.</p>
+      </div>
+      <div class="premium-card" data-feature="Double Discounts">
+        <h3>Double Discounts</h3>
+        <p>Exclusive offers and discounts on financial tools.</p>
+      </div>
+    </div>
+    <div class="subscription-section">
+      <p id="subscription-status">You are not subscribed yet.</p>
+      <button id="subscribe-btn" onclick="toggleSubscription()">Subscribe for 11.99 AED/month</button>
+    </div>
+  </div>
+
+  <!-- Modal for premium feature details -->
+  <div id="premium-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title">Premium Feature</h2>
+      <p id="modal-description">Detailed information about the premium feature.</p>
+    </div>
+  </div>
+
+  <!-- Payment Info Modal -->
+<div id="payment-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePaymentModal()">&times;</span>
+      <h2>Enter Payment Information</h2>
+      <form id="payment-form" onsubmit="submitPayment(event)">
+        <input type="text" id="card-number" placeholder="Card Number" required>
+        <input type="text" id="expiry-date" placeholder="Expiry Date (MM/YY)" required>
+        <input type="text" id="cvv" placeholder="CVV" required>
+        <input type="text" id="card-holder" placeholder="Name on Card" required>
+        <button type="submit">Submit Payment</button>
+      </form>
+    </div>
+  </div>
+  
+</body>
+</html>

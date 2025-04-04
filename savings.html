@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Goals</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<header>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-list">
+            
+        </ul>
+    </nav>
+</header>
+
+<!-- Sidebar structure -->
+<div id="sidebar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="savings.html">Savings Goals</a></li>
+        <li><a href="budget.html">Budget Tracker</a></li>
+        <li><a href="debt.html">Debt Planner</a></li>
+        <li><a href="ask.html">Ask MoneyMind</a></li>
+        <li><a href="account.html">Account</a></li>
+    </ul>
+</div>
+    
+
+    <!-- Savings Goals Container -->
+    <div class="savings-container">
+        <h2>Track Your Savings Goals</h2>
+        <div class="goal-input">
+            <label for="savings-goal">Set Your Savings Goal:</label>
+            <input type="number" id="savings-goal" placeholder="Enter your goal in AED">
+            <button onclick="setGoal()">Set Goal</button>
+        </div>
+
+        <!-- Savings Progress Section -->
+        <div class="savings-progress">
+            <p>Saved so far: <span id="savings-progress">0</span> AED</p>
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Add Savings Buttons -->
+        <div class="add-savings">
+            <button onclick="addSavings(50)">+50 AED</button>
+            <button onclick="addSavings(100)">+100 AED</button>
+        </div>
+
+        <!-- Hints Section -->
+        <div class="savings-hints">
+            <p>Helpful Hints:</p>
+            <ul>
+                <li>Set achievable goals to stay motivated.</li>
+                <li>Save consistently, even if it's a small amount.</li>
+                <li>Track your progress regularly to stay on track.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
